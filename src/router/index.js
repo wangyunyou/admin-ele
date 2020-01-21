@@ -55,18 +55,18 @@ export const constantRoutes = [
     }]
   },
 
-  // {
-  //   path: '/form',
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       name: 'Form',
-  //       component: () => import('@/views/form/index'),
-  //       meta: { title: '表单', icon: 'form' }
-  //     }
-  //   ]
-  // },
+  {
+    path: '/user',
+    component: Layout,
+    children: [
+      {
+        path: 'user',
+        name: 'User',
+        component: () => import('@/views/user/index'),
+        meta: { title: '用户列表', icon: 'user' }
+      }
+    ]
+  },
 
   {
     path: '/example',
