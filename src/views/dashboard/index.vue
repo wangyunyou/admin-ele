@@ -1,6 +1,7 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+    <div class="dashboard-text">当前登录用户: {{ name }}</div>
+    <div class="dashboard-welcome">欢迎使用金智海后台管理系统</div>
   </div>
 </template>
 
@@ -23,8 +24,16 @@ export default {
     margin: 30px;
   }
   &-text {
-    font-size: 30px;
+    font-size: 16px;
     line-height: 46px;
+  }
+  &-welcome {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 32px;
+    margin-top: 300px;
   }
 }
 </style>
