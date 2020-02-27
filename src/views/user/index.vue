@@ -17,8 +17,8 @@
     </div>
     <el-table
       :data="tableData"
-      style="width: 100%;height:650px"
-      max-height="650"
+      style="width: 100%;height:630px"
+      max-height="635"
       :cell-style="cellStyle"
       :header-cell-style="cellStyle"
     >
