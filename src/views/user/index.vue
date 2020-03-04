@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="topBar">
-      <el-button type="primary">
+      <el-button type="primary" @click="addInfo">
         添加
         <i class="el-icon-circle-plus-outline" />
       </el-button>
@@ -17,8 +17,7 @@
     </div>
     <el-table
       :data="tableData"
-      style="width: 100%;height:630px"
-      max-height="635"
+      style="width: 100%;"
       :cell-style="cellStyle"
       :header-cell-style="cellStyle"
     >
@@ -111,7 +110,7 @@
         <el-button @click="dialogFormVisible = false">取 消</el-button>
         <el-button
           type="primary"
-          @click="dialogFormVisible = false"
+          @click="saveInfo"
         >保 存</el-button>
       </div>
     </el-dialog>
@@ -144,6 +143,9 @@ export default {
     this.run()
   },
   methods: {
+    addInfo() {
+      this.dialogFormVisible = true
+    },
     handleEdit(index, row) {
       this.dialogFormVisible = true
       console.log(index, row)
@@ -169,6 +171,9 @@ export default {
             message: '已取消删除'
           })
         })
+    },
+    saveInfo() {
+      console.log(1)
     },
     handleSizeChange(val) {
       console.log(`每页 ${val} 条`)
