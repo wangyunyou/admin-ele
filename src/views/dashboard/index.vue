@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard-container">
     <div class="dashboard-text">当前登录用户: {{ name }}</div>
-    <div class="dashboard-welcome">欢迎使用金智海后台管理系统</div>
+    <div class="dashboard-welcome">------ 欢迎使用金智海后台管理系统 ------</div>
   </div>
 </template>
 
@@ -29,11 +29,9 @@ export default {
   }
   &-welcome {
     width: 100%;
-    height: 50px;
     text-align: center;
-    line-height: 50px;
     font-size: 32px;
-    margin-top: 300px;
+    margin-top: 250px;
   }
 }
 </style>

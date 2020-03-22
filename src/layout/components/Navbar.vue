@@ -16,7 +16,7 @@
               首页
             </el-dropdown-item>
           </router-link>
-          <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
+          <a target="_blank" href="https://panjiachen.gitee.io/vue-element-admin-site/zh/">
             <el-dropdown-item>文档</el-dropdown-item>
           </a>
           <el-dropdown-item divided @click.native="logout">
@@ -48,9 +48,26 @@ export default {
     toggleSideBar() {
       this.$store.dispatch('app/toggleSideBar')
     },
-    async logout() {
-      await this.$store.dispatch('user/logout')
-      this.$router.push(`/login?redirect=${this.$route.fullPath}`)
+    logout() {
+      this.$confirm('确定退出登录吗?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(async() => {
+        this.$message({
+          type: 'success',
+          message: '您已退出登录!'
+        })
+        await this.$store.dispatch('user/logout')
+        this.$router.push(`/login?redirect=${this.$route.fullPath}`)
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '已取消'
+        })
+      })
+      // await this.$store.dispatch('user/logout')
+      // this.$router.push(`/login?redirect=${this.$route.fullPath}`)
     }
   }
 }
