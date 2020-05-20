@@ -72,7 +72,7 @@ export default {
           window.scrollTo(0, next)
         }
         i++
-      }, 16.7)
+      }, 15)
     },
     easeInOutQuad(t, b, c, d) {
       if ((t /= d / 2) < 1) return c / 2 * t * t + b
