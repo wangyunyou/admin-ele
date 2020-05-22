@@ -119,7 +119,7 @@
     </div>
     <!-- you can add element-ui's tooltip -->
     <el-tooltip placement="top" content="tooltip">
-      <back-to-top :custom-style="myBackToTopStyle" :visibility-height="300" :back-position="50" transition-name="fade" />
+      <back-to-top :custom-style="myBackToTopStyle" :visibility-height="300" :back-position="0" transition-name="fade" />
     </el-tooltip>
   </div>
 </template>

@@ -60,6 +60,7 @@ export default {
     backToTop() {
       if (this.isMoving) return
       const start = window.pageYOffset
+      console.log(start)
       let i = 0
       this.isMoving = true
       this.interval = setInterval(() => {
